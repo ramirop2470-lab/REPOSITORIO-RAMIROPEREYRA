@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int tabla[4][4] = {
+        {0, 0, 0, 0},
+        {0, 1, 0, 1},
+        {1, 0, 0, 1},
+        {1, 1, 1, 1}
+    };
+    int f, c;
+
+    printf("A\tB\tAND\tOR\n");
+    for (f = 0; f < 4; f++) {
+        for (c = 0; c < 4; c++) {
+            printf("%d\t", tabla[f][c]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
