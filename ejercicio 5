@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int cubo[3][2][2];
+    int a, b, c;
+
+    for (a = 0; a < 3; a++) {
+        for (b = 0; b < 2; b++) {
+            for (c = 0; c < 2; c++) {
+                printf("Numero capa %d, fila %d, columna %d: ", a, b, c);
+                scanf("%d", &cubo[a][b][c]);
+            }
+        }
+    }
+
+    printf("\nMatriz ingresada:\n");
+    for (a = 0; a < 3; a++) {
+        printf("Capa %d\n", a);
+        for (b = 0; b < 2; b++) {
+            for (c = 0; c < 2; c++) {
+                printf("%d\t", cubo[a][b][c]);
+            }
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
