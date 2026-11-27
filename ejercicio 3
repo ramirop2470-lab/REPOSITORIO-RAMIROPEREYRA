@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int mat[3][2];
+    int f, c;
+
+    for (f = 0; f < 3; f++) {
+        for (c = 0; c < 2; c++) {
+            printf("Ingrese numero fila %d columna %d: ", f, c);
+            scanf("%d", &mat[f][c]);
+        }
+    }
+
+    printf("\nMatriz:\n");
+    for (f = 0; f < 3; f++) {
+        for (c = 0; c < 2; c++) {
+            printf("%d\t", mat[f][c]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
