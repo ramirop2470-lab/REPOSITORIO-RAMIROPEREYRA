@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+struct alumno {
+    char nombre[30];
+    int edad;
+    int año;
+};
+
+void cargar() {
+    struct alumno a;
+
+    printf("Nombre: ");
+    scanf("%29s", a.nombre);
+    printf("Edad: ");
+    scanf("%d", &a.edad);
+    printf("Año: ");
+    scanf("%d", &a.año);
+
+    printf("\nNombre: %s\n", a.nombre);
+    printf("Edad: %d\n", a.edad);
+    printf("Año: %d\n", a.año);
+}
+
+int main() {
+    char op;
+
+    cargar();
+
+    printf("¿Desea cambiar algo (s-n)? ");
+    scanf(" %c", &op);
+
+    while (op == 's') {
+        cargar();
+        printf("¿Desea cambiar algo (s-n)? ");
+        scanf(" %c", &op);
+    }
+
+    return 0;
+}
