@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int nums[5];
+    int k, acum = 0;
+
+    for (k = 0; k < 5; k++) {
+        printf("Ingrese el dato %d: ", k + 1);
+        scanf("%d", &nums[k]);
+    }
+
+    for (k = 0; k < 5; k++) {
+        acum += nums[k];
+    }
+
+    printf("La suma de los datos del vector es %d\n", acum);
+    printf("El promedio de los datos del vector es %d\n", acum / 5);
+
+    return 0;
+}
