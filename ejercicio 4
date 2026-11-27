@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int m[3][2];
+    int x, y;
+
+    for (x = 0; x < 3; x++) {
+        for (y = 0; y < 2; y++) {
+            printf("Numero para fila %d, columna %d: ", x, y);
+            scanf("%d", &m[x][y]);
+        }
+    }
+
+    printf("\nMatriz ingresada:\n");
+    for (x = 0; x < 3; x++) {
+        for (y = 0; y < 2; y++) {
+            printf("%d\t", m[x][y]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
