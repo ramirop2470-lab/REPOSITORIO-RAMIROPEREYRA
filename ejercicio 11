@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int casillas[5];
+    int k, pos;
+
+    for (k = 0; k < 5; k++) {
+        printf("Ingrese el valor de la casilla %d: ", k);
+        scanf("%d", &casillas[k]);
+    }
+
+    printf("Indice a consultar (5 para salir): ");
+    scanf("%d", &pos);
+
+    while (pos != 5) {
+        if (pos < 0 || pos > 4) {
+            printf("El indice debe estar entre 0 y 4\n");
+        } else {
+            printf("El valor del indice %d es: %d\n", pos, casillas[pos]);
+        }
+        printf("Indice a consultar (5 para salir): ");
+        scanf("%d", &pos);
+    }
+
+    printf("Programa finalizado\n");
+
+    return 0;
+}
