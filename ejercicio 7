@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+void mostrar(char nombre[], int t[4][3]) {
+    int f, c;
+
+    printf("\nTabla de verdad %s\n", nombre);
+    printf("A\tB\tS\n");
+    for (f = 0; f < 4; f++) {
+        for (c = 0; c < 3; c++) {
+            printf("%d\t", t[f][c]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int y[4][3] = {
+        {0, 0, 0},
+        {0, 1, 0},
+        {1, 0, 0},
+        {1, 1, 1}
+    };
+    int o[4][3] = {
+        {0, 0, 0},
+        {0, 1, 1},
+        {1, 0, 1},
+        {1, 1, 1}
+    };
+    int xo[4][3] = {
+        {0, 0, 0},
+        {0, 1, 1},
+        {1, 0, 1},
+        {1, 1, 0}
+    };
+    int na[4][3] = {
+        {0, 0, 1},
+        {0, 1, 1},
+        {1, 0, 1},
+        {1, 1, 0}
+    };
+
+    mostrar("AND", y);
+    mostrar("OR", o);
+    mostrar("XOR", xo);
+    mostrar("NAND", na);
+
+    return 0;
+}
