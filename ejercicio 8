@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+
+int vec[5];
+
+void cambiar() {
+    int pos, nuevo;
+
+    do {
+        printf("Indice del numero a cambiar: ");
+        scanf("%d", &pos);
+    } while (pos < 0 || pos >= 5);
+
+    printf("Nuevo numero: ");
+    scanf("%d", &nuevo);
+    printf("El nuevo numero en la posicion %d es %d\n", pos, nuevo);
+}
+
+int main() {
+    int k;
+    char op[20];
+
+    for (k = 0; k < 5; k++) {
+        printf("Valor para el indice %d: ", k);
+        scanf("%d", &vec[k]);
+    }
+
+    printf("Los valores cargados son:\n");
+    for (k = 0; k < 5; k++) {
+        printf("%d\n", vec[k]);
+    }
+
+    printf("Desea CONTINUAR o FINALIZAR el programa? ");
+    scanf("%s", op);
+
+    while (strcmp(op, "FINALIZAR") != 0) {
+        if (strcmp(op, "CONTINUAR") == 0) {
+            cambiar();
+        }
+        printf("Desea CONTINUAR o FINALIZAR el programa? ");
+        scanf("%s", op);
+    }
+
+    return 0;
+}
