@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int datos[5];
+    int n;
+
+    for (n = 0; n < 5; n++) {
+        printf("Ingrese el valor del dato %d: ", n + 1);
+        scanf("%d", &datos[n]);
+    }
+
+    for (n = 0; n < 5; n++) {
+        printf("Valor del dato: %d\n", datos[n]);
+    }
+
+    return 0;
+}
