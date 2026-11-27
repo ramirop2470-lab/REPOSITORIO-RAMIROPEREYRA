@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int datos[10];
+    int a, b, cambio;
+    int total = 0;
+
+    printf("Ingrese los valores del vector\n");
+    for (a = 0; a < 10; a++) {
+        printf("Casilla %d: ", a);
+        scanf("%d", &datos[a]);
+        total = total + datos[a];
+    }
+
+    for (a = 1; a < 10; a++) {
+        cambio = datos[a];
+        b = a - 1;
+        while (b >= 0 && datos[b] > cambio) {
+            datos[b + 1] = datos[b];
+            b--;
+        }
+        datos[b + 1] = cambio;
+    }
+
+    for (a = 0; a < 10; a++) {
+        printf("%d\n", datos[a]);
+    }
+
+    printf("El promedio de los valores del vector es: %d\n", total / 10);
+
+    return 0;
+}
