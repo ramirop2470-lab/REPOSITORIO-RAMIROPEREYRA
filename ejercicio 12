@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void comparar(int p[], int q[]) {
+    int m;
+
+    for (m = 0; m < 5; m++) {
+        if (p[m] == q[m]) {
+            printf("En la posicion %d, los dos valores son iguales: %d\n", m, p[m]);
+        } else if (p[m] > q[m]) {
+            printf("En la posicion %d, el mayor es %d y corresponde al Vector 1\n", m, p[m]);
+        } else {
+            printf("En la posicion %d, el mayor es %d y corresponde al Vector 2\n", m, q[m]);
+        }
+    }
+}
+
+int main() {
+    int primero[5], segundo[5];
+    int i;
+
+    printf("Ingrese los valores del vector 1\n");
+    for (i = 0; i < 5; i++) {
+        printf("Valor de la casilla %d: ", i);
+        scanf("%d", &primero[i]);
+    }
+
+    printf("Ingrese los valores del vector 2\n");
+    for (i = 0; i < 5; i++) {
+        printf("Valor de la casilla %d: ", i);
+        scanf("%d", &segundo[i]);
+    }
+
+    comparar(primero, segundo);
+
+    return 0;
+}
