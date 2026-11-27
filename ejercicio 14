@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int valores[5];
+    int k, pos, nuevo;
+    char resp;
+
+    for (k = 0; k < 5; k++) {
+        printf("Valor para el indice %d: ", k);
+        scanf("%d", &valores[k]);
+    }
+
+    printf("Los valores cargados son:\n");
+    for (k = 0; k < 5; k++) {
+        printf("%d\n", valores[k]);
+    }
+
+    printf("Terminar programa (s-n)? ");
+    scanf(" %c", &resp);
+
+    while (resp != 's') {
+        if (resp == 'n') {
+            do {
+                printf("Indice del numero a cambiar: ");
+                scanf("%d", &pos);
+            } while (pos < 0 || pos >= 5);
+
+            printf("Nuevo numero: ");
+            scanf("%d", &nuevo);
+            printf("El nuevo numero en la posicion %d es %d\n", pos, nuevo);
+        }
+        printf("Terminar programa (s-n)? ");
+        scanf(" %c", &resp);
+    }
+
+    return 0;
+}
